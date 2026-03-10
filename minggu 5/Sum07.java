@@ -1,26 +1,26 @@
 public class Sum07 {
-    
     double keuntungan[];
 
     Sum07(int el){
         keuntungan = new double[el];
-
+        
     }
     double totalBF(){
-        double total = 0;
-        for (int i=0; i<keuntungan.length; i++){
+        double total=0;
+        for(int i=0; i<keuntungan.length; i++){
             total = total + keuntungan[i];
-
-        } 
+        }
         return total;
     }
-    double totalDC(double arr[], int l, int r){
-        if(l==r){
+
+    double totalDC(double[] arr, int l, int r){
+        if(l == r){
             return arr[l];
+        } else {
+            int mid = (l + r) / 2;
+            double sumLeft = totalDC(arr, l, mid);
+            double sumRight = totalDC(arr, mid + 1, r);
+            return sumLeft + sumRight;
         }
-        int mid = (l+r)/2;
-        double lsum = totalDC(arr, l, mid);
-        double rsum = totalDC(arr, mid+l, r);
-        return lsum + rsum;
     }
 }
