@@ -15,7 +15,7 @@ public class MainPangkat07 {
             int pangkat1 = input.nextInt();
             pangkat[i] = new Pangkat07();
             pangkat[i].pangkat(basis, pangkat1);
-        }
+        } 
 
         System.out.println("\nHASIL PANGKAT BRUTEFORCE: ");
         for(Pangkat07 p : pangkat){
