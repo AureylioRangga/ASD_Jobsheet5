@@ -5,7 +5,7 @@ public class Faktorial07 {
         for(int i = 1; i <= n; i++){
             fakto *= i;
         }
-        return fakto;
+        return fakto; 
     }
     int faktorialDC(int n){
         if(n == 1){
