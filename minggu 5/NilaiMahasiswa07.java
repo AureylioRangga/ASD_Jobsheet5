@@ -1,17 +1,15 @@
 public class NilaiMahasiswa07 {
     
     Mahasiswa07[] dataMahasiswa;
-
+    
     void Nilai(Mahasiswa07[] dataMahasiswa) {
         this.dataMahasiswa = dataMahasiswa;
     }
 
     int maxUTSDC(int l, int r) {
-
         if (l == r) {
             return dataMahasiswa[l].nilaiUTS;
         }
-
         int mid = (l + r) / 2;
         int leftMax  = maxUTSDC(l, mid);
         int rightMax = maxUTSDC(mid + 1, r);
@@ -24,11 +22,9 @@ public class NilaiMahasiswa07 {
     }
 
     int minUTSDC(int l, int r) {
-
-        if (l == r) {
+         if (l == r) {
             return dataMahasiswa[l].nilaiUTS;
         }
-
         int mid = (l + r) / 2;
         int leftMin  = minUTSDC(l, mid);
         int rightMin = minUTSDC(mid + 1, r);
