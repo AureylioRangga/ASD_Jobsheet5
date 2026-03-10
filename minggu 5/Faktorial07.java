@@ -1,21 +1,18 @@
 public class Faktorial07 {
 
-    int faktorial (int n) {
+    int faktorialBF(int n){
         int fakto = 1;
-        for(int i=1; i<=n; i++) {
-            fakto = fakto * i;
+        for(int i = 1; i <= n; i++){
+            fakto *= i;
         }
         return fakto;
     }
 
-    int faktorialDC(int n) {
-        if(n==1){
+    int faktorialDC(int n){
+        if(n == 1){
             return 1;
-        }else{
-            int fakto = n * faktorialDC(n-1);
-            return fakto;
-        }
+        } else {
+            return n * faktorialDC(n-1);
         }
     }
-
-
+}
