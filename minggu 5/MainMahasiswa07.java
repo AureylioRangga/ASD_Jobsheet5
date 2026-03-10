@@ -13,7 +13,7 @@ public class MainMahasiswa07 {
 
         System.out.println("DAFTAR NILAI MAHASISWA");
         System.out.printf("%-8s %-12s %-12s %-10s %-10s%n",
-                "Nama", "NIM", "Thn Masuk", "Nilai UTS", "Nilai UAS");
+                "Nama", "NIM", "Tahun Masuk", "Nilai UTS", "Nilai UAS");
         System.out.println("-------------------------------------------------------");
         for (Mahasiswa07 m : data) {
             System.out.printf("%-8s %-12s %-12d %-10d %-10d%n",
