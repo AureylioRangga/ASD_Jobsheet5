@@ -3,7 +3,7 @@ public class MainPangkat07 {
     
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
-        
+
         System.out.print("Masukkan jumlah elemen: ");
         int elemen = input.nextInt();
 
@@ -19,12 +19,12 @@ public class MainPangkat07 {
 
         System.out.println("\nHASIL PANGKAT BRUTEFORCE: ");
         for(Pangkat07 p : pangkat){
-            System.out.println(p.nilai+"^"+p.pangkat+" : " + p.pangkatBF(p.nilai, p.pangkat));
+            System.out.println(p.nilai + "^" + p.pangkat+" : " + p.pangkatBF(p.nilai, p.pangkat));
         }
 
         System.out.println("\nHASIL PANGKAT DIVIDE AND CONQUER: ");
         for(Pangkat07 p : pangkat){
-            System.out.println(p.nilai+"^"+p.pangkat+" : " + p.pangkatDC(p.nilai, p.pangkat));
+            System.out.println(p.nilai + "^" + p.pangkat+" : " + p.pangkatDC(p.nilai, p.pangkat));
         }
     }
 }
