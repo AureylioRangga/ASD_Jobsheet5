@@ -11,7 +11,7 @@ public class Sum07 {
         for (int i=0; i<keuntungan.length; i++){
             total = total + keuntungan[i];
 
-        }
+        } 
         return total;
     }
     double totalDC(double arr[], int l, int r){
