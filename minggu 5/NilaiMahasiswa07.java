@@ -1,53 +1,50 @@
 public class NilaiMahasiswa07 {
+    
+    Mahasiswa07[] dataMahasiswa;
 
-    int uts[];
-    int uas[];
-
-    NilaiMahasiswa07(int uts[], int uas[]){
-        this.uts = uts;
-        this.uas = uas;
+    void Nilai(Mahasiswa07[] dataMahasiswa) {
+        this.dataMahasiswa = dataMahasiswa;
     }
 
-    int maxUTS(int l, int r){
-        if(l == r){
-            return uts[l];
+    int maxUTSDC(int l, int r) {
+
+        if (l == r) {
+            return dataMahasiswa[l].nilaiUTS;
         }
 
         int mid = (l + r) / 2;
+        int leftMax  = maxUTSDC(l, mid);
+        int rightMax = maxUTSDC(mid + 1, r);
 
-        int max1 = maxUTS(l, mid);
-        int max2 = maxUTS(mid + 1, r);
-
-        if(max1 > max2){
-            return max1;
+        if (leftMax > rightMax) {
+            return leftMax;
         } else {
-            return max2;
+            return rightMax;
         }
     }
 
-    int minUTS(int l, int r){
-        if(l == r){
-            return uts[l];
+    int minUTSDC(int l, int r) {
+
+        if (l == r) {
+            return dataMahasiswa[l].nilaiUTS;
         }
 
         int mid = (l + r) / 2;
+        int leftMin  = minUTSDC(l, mid);
+        int rightMin = minUTSDC(mid + 1, r);
 
-        int min1 = minUTS(l, mid);
-        int min2 = minUTS(mid + 1, r);
-
-        if(min1 < min2){
-            return min1;
+        if (leftMin < rightMin) {
+            return leftMin;
         } else {
-            return min2;
+            return rightMin;
         }
     }
 
-    double rataUAS(){
-        int total = 0;
-
-        for(int i = 0; i < uas.length; i++){
-            total += uas[i];
+    double rataRataUASBF() {
+        double total = 0;
+        for (int i = 0; i < dataMahasiswa.length; i++) {
+            total = total + dataMahasiswa[i].nilaiUAS;
         }
-        return (double) total / uas.length;
+        return total / dataMahasiswa.length;
     }
 }
