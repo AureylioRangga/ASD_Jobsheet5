@@ -19,7 +19,7 @@ public class MainMahasiswa07 {
             System.out.printf("%-8s %-12s %-12d %-10d %-10d%n",
                     m.nama, m.nim, m.tahunMasuk, m.nilaiUTS, m.nilaiUAS);
         }
-        System.out.println("=================================================");
+        System.out.println("===================================================");
 
         NilaiMahasiswa07 nilai = new NilaiMahasiswa07();
         nilai.Nilai(data);
@@ -29,7 +29,7 @@ public class MainMahasiswa07 {
         int    minUTS  = nilai.minUTSDC(0, n - 1);
         double rataUAS = nilai.rataRataUASBF();
 
-        System.out.println("\n===================== HASIL =====================");
+        System.out.println("\n===================== HASIL =======================");
         System.out.println("a) Nilai UTS Tertinggi (Divide and Conquer) : " + maxUTS);
         System.out.println("b) Nilai UTS Terendah  (Divide and Conquer) : " + minUTS);
         System.out.printf( "c) Rata-rata Nilai UAS (Brute Force)        : %.2f%n", rataUAS);
