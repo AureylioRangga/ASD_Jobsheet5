@@ -48,7 +48,6 @@ public class NilaiMahasiswa07 {
         for(int i = 0; i < uas.length; i++){
             total += uas[i];
         }
-
         return (double) total / uas.length;
     }
 }
