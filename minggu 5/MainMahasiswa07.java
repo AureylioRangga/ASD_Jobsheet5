@@ -35,4 +35,4 @@ public class MainMahasiswa07 {
         System.out.printf( "c) Rata-rata Nilai UAS (Brute Force)        : %.2f%n", rataUAS);
         System.out.println("===================================================");
     }
-}
+} 
